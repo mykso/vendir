@@ -21,7 +21,7 @@ type StagingDir struct {
 }
 
 func NewStagingDir() (StagingDir, error) {
-	rootDir, err := os.MkdirTemp(".", ".vendir-tmp-")
+	rootDir, err := os.MkdirTemp("", "vendir-tmp-")
 	if err != nil {
 		return StagingDir{}, err
 	}
